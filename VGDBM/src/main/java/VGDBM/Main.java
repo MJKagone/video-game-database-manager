@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         
         DatabaseManager db = new DatabaseManager();
-        String address = "." + "\\";
+        String address = ".";
         String fileName = "games.db";
 
         try {

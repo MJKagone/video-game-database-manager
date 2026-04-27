@@ -25,7 +25,7 @@ public class DatabaseManagerTest {
     @Before
     public void setUp() {
         db = new DatabaseManager();
-        address = "." + "\\";
+        address = ".";
         fileName = "testGames.sqlite";
         try {
             db.open(address, fileName);

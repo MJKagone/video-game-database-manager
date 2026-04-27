@@ -29,18 +29,19 @@ class DatabaseManager {
     public void open(String address, String name) throws SQLException {
 
         boolean exists;
-        File file = new File(address + "\\" + name);
+        File file = new File(address, name);
+        String dbPath = file.getPath();
         exists = file.exists();
 
         if (!exists) {
             System.out.println("Creating " + name);
-            conn = DriverManager.getConnection("jdbc:sqlite:" + address + "\\" + name);
+            conn = DriverManager.getConnection("jdbc:sqlite:" + dbPath);
             initialize(conn);
         }
 
         else {
             System.out.println("Opening " + name);
-            conn = DriverManager.getConnection("jdbc:sqlite:" + address + "\\" + name);
+            conn = DriverManager.getConnection("jdbc:sqlite:" + dbPath);
         }
 
     }

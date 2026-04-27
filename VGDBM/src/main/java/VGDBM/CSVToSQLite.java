@@ -94,7 +94,7 @@ class CSVToSQLite {
     public static void main(String[] args) {
 
         DatabaseManager db = new DatabaseManager();
-        String CSVAddress = "." + "\\games.csv";
+        String CSVAddress = "." + File.separator + "games.csv";
 
         System.out.println("Invert the order of the CSV file? (y/n)");
         Scanner scanner = new Scanner(System.in);
